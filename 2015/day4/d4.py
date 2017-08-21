@@ -6,7 +6,7 @@ def find_suffix(start, end, secret, pat):
             # Return the first suffix found
             if i > 0:
                 return i               
-            
+
 
 if __name__ == '__main__':
     ## Part 1
@@ -14,4 +14,4 @@ if __name__ == '__main__':
 
     ## Part 2
     print(find_suffix(1, 10000000, 'yzbqklnj', '000000'))
-    
+
