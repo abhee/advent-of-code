@@ -12,7 +12,7 @@ def ribbon_per_box(l, w, h):
     # smallest side
     s1 = min(l,w,h)
 
-    # determine second smallest side
+    # second smallest side
     if s1 == l:
         s2 = min(w,h)
     elif s1 == w:
@@ -20,7 +20,7 @@ def ribbon_per_box(l, w, h):
     else:
         s2 = min(l,w)
     
-    return (l*w*h) + 2*(+s2)
+    return (l*w*h) + 2*(s1+s2)
 
 
 if __name__ == '__main__':
