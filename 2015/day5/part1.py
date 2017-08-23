@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-import string
-
 def has_three_vowels(s):
     """ Returns True if string has atleast 3 distinct vowels."""
     vowels = {'a':0, 'e':0, 'i':0, 'o':0, 'u':0}
@@ -39,7 +37,7 @@ def contains_invalid_string(s):
 def is_nice(s):
     """ Determines if supplied string is nice or naughty"""
 
-    return has_three_vowels(s.lower())and has_a_double_letter(s.lower()) and not contains_invalid_string(s.lower())
+    return has_three_vowels(s.lower()) and has_a_double_letter(s.lower()) and not contains_invalid_string(s.lower())
 
 
 if __name__ == '__main__':
