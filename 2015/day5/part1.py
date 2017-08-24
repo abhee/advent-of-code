@@ -43,4 +43,3 @@ def is_nice(s):
 if __name__ == '__main__':
     with open('input.txt') as f:
         print(sum([is_nice(eachLine) for eachLine in f.readlines()]))
-            
