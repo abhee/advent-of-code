@@ -36,8 +36,10 @@ def contains_invalid_string(s):
             
 def is_nice(s):
     """ Determines if supplied string is nice or naughty"""
+    
+    s = s.lower() 
 
-    return has_three_vowels(s.lower()) and has_a_double_letter(s.lower()) and not contains_invalid_string(s.lower())
+    return has_three_vowels(s) and has_a_double_letter(s) and not contains_invalid_string(s)
 
 
 if __name__ == '__main__':
