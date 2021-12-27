@@ -13,26 +13,20 @@ def has_three_vowels(s):
 def has_a_double_letter(s):
     """ Returns True if string has atleast one letter that appears twice in a row."""
     
-    double_found = False
-    
     for i in range(len(s)):
         if s[i:i+2] == s[i]*2:
-            double_found = True
-            break
+            return True
 
-    return double_found
+    return False
 
 def contains_invalid_string(s):
     '''Returns True if string contains strings "ab", "cd", "pq" or "xy"'''
     
-    flag = False
-    
     for i in ["ab", "cd", "pq", "xy"]:
         if i in s:
-            flag = True
-            break
+            return True
 
-    return flag
+    return False
             
 def is_nice(s):
     """ Determines if supplied string is nice or naughty"""
