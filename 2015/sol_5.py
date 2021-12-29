@@ -5,7 +5,7 @@ def has_three_vowels(s):
     vowels = {'a':0, 'e':0, 'i':0, 'o':0, 'u':0}
 
     for i in s:
-        if i in vowels.keys():
+        if i in vowels:
             vowels[i] += 1
 
     return sum(vowels.values()) >= 3
@@ -37,5 +37,5 @@ def is_nice(s):
 
 
 if __name__ == '__main__':
-    with open('input.txt') as f:
+    with open('inputs/input_5.txt') as f:
         print(sum([is_nice(eachLine) for eachLine in f.readlines()]))
