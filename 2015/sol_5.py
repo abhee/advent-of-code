@@ -54,16 +54,13 @@ def has_repeat_pair(s):
     pairs_seen = set()
 
     for idx in range(len(s)):
-        ## Non overlapping repeat pair having same letter - ex. aaaa
-        if s[idx : idx+2] == s[idx+2 : idx+4]:
+        ## Non overlapping repeat pair having same letter (ex. aaaa) or a pair that was already seen
+        if (s[idx : idx+2] == s[idx+2 : idx+4]) or (s[idx : idx+2] in pairs_seen):
             return True
 
         ## Overlapping repeat pair having same letter - ex. aaa
         if s[idx : idx+2] == s[idx+1 : idx+3]:
             return False
-
-        if s[idx : idx+2] in pairs_seen:
-            return True
         
         pairs_seen.add(s[idx : idx+2])
 
