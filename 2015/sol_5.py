@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-## Part 1
+### Part 1
 
 def has_three_vowels(s):
     ''' Returns True if string has atleast 3 distinct vowels. '''
@@ -45,11 +45,8 @@ assert is_nice_1('jchzalrnumimnmhp') == False
 assert is_nice_1('haegwjzuvuyypxyu') == False
 assert is_nice_1('dvszwmarrgswjxmb') == False
 
-with open('inputs/input_5.txt') as f:
-    print(sum([is_nice_1(eachLine) for eachLine in f.readlines()]))
 
-
-## Part 2
+### Part 2
 
 def has_repeat_pair(s):
     ''' pair of any two letters that appears at least twice in the string without overlapping '''
@@ -92,7 +89,7 @@ def is_nice_2(s):
 
     return has_repeat_pair(s) and has_palindromic_triple(s)
  
-
+## Tests
 assert is_nice_2('qjhvhtzxzqqjkmpb') == True
 assert is_nice_2('xxyxx') == True
 assert is_nice_2('aaa') == False
@@ -101,6 +98,9 @@ assert is_nice_2('uurcxstgmygtbstg') == False
 assert is_nice_2('ieodomkazucvgmuy') == False
 
 
-with open('inputs/input_5.txt') as f:
-    print(sum([is_nice_2(eachLine) for eachLine in f.readlines()]))
+#### Print answer
 
+with open('inputs/input_5.txt') as f:
+    inp = f.readlines()
+    print(sum([is_nice_1(eachLine) for eachLine in inp]))
+    print(sum([is_nice_2(eachLine) for eachLine in inp]))
